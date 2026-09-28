@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    background-color: #bd7646;
+    font-family: 'Poppins', system-ui, sans-serif;
+    padding: 30px;
+
+}
+
+a {
+    color: #fff;
+}
+
+header {
+    font-family: 'Outfit', system-ui, sans-serif;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Oswald', system-ui, sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.05em;
+}
