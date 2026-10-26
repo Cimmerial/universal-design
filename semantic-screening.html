@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before Trilogy — Screening Night RSVP</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/legibility.css">
+</head>
+
+<body>
+    <nav class="skip-nav" aria-label="Skip links">
+        <button type="button" class="skip-nav__trigger">Skip navigation</button>
+        <ul id="skip-targets" class="skip-nav__menu">
+            <li><a href="#main-content">Skip to main content</a></li>
+            <li><a href="#overview">Skip to overview</a></li>
+            <li><a href="#rsvp">Skip to RSVP form</a></li>
+            <li><a href="#showtimes">Skip to showtimes and box office</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <header>
+            <p class="page-kicker">
+                <span class="material-icons" aria-hidden="true">movie</span>
+                Campus film club
+            </p>
+            <h1>Before Trilogy Screening Night</h1>
+            <p>Reserve a seat for our <abbr title="Richard Linklater">Linklater</abbr> marathon featuring
+                <cite>Before Sunrise</cite>, <cite>Before Sunset</cite>, and <cite>Before Midnight</cite>.</p>
+        </header>
+
+        <nav aria-label="Page sections">
+            <h2 class="sr-only">Page navigation</h2>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#rsvp">RSVP</a></li>
+                <li><a href="#showtimes">Showtimes</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="semantic_html5.html">Trilogy article</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-content">
+            <section id="overview">
+                <h2>Overview</h2>
+                <p>The Before Trilogy follows Jesse and Céline across three films filmed nine years apart. Our
+                    screening night shows each film in release order with short breaks between features. RSVP below so
+                    we can plan seating and captions.</p>
+
+                <figure>
+                    <figcaption>Recommended viewing order: <cite>Before Sunrise</cite> (1995),
+                        <cite>Before Sunset</cite> (2004), then <cite>Before Midnight</cite> (2013).</figcaption>
+                </figure>
+            </section>
+
+            <section id="rsvp" aria-labelledby="rsvp-heading">
+                <h2 id="rsvp-heading">
+                    <span class="material-icons" aria-hidden="true">event</span>
+                    RSVP
+                </h2>
+                <p>Complete the form to reserve a seat. Fields marked required must be filled in.</p>
+
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Reserve a seat</legend>
+
+                        <p>
+                            <label for="guest-name">Full name <span class="required-hint">(required)</span></label>
+                            <input type="text" id="guest-name" name="guest-name" autocomplete="name" required>
+                        </p>
+
+                        <p>
+                            <label for="guest-email">Email <span class="required-hint">(required)</span></label>
+                            <input type="email" id="guest-email" name="guest-email" autocomplete="email"
+                                aria-describedby="email-hint" required>
+                            <small id="email-hint">We only use this for confirmation.</small>
+                        </p>
+
+                        <p>
+                            <label for="screening">Which screening?</label>
+                            <select id="screening" name="screening" required>
+                                <option value="">Choose a screening</option>
+                                <option value="sunrise">Before Sunrise — Friday, 7:00 p.m.</option>
+                                <option value="sunset">Before Sunset — Saturday, 7:00 p.m.</option>
+                                <option value="midnight">Before Midnight — Sunday, 7:00 p.m.</option>
+                                <option value="marathon">Full trilogy marathon — Saturday, 2:00 p.m.</option>
+                            </select>
+                        </p>
+
+                        <fieldset>
+                            <legend>Have you seen this film before?</legend>
+                            <p>
+                                <input type="radio" name="seen-before" id="seen-first" value="first" required>
+                                <label for="seen-first">First time</label>
+                            </p>
+                            <p>
+                                <input type="radio" name="seen-before" id="seen-rewatch" value="rewatch">
+                                <label for="seen-rewatch">Rewatch</label>
+                            </p>
+                        </fieldset>
+
+                        <p>
+                            <input type="checkbox" id="need-captions" name="need-captions" value="yes">
+                            <label for="need-captions">I need captions</label>
+                        </p>
+
+                        <p>
+                            <input type="checkbox" id="email-updates" name="email-updates" value="yes">
+                            <label for="email-updates">Email me about future screenings</label>
+                        </p>
+
+                        <p>
+                            <label for="access-notes">Accessibility needs or questions</label>
+                            <textarea id="access-notes" name="access-notes" rows="4"
+                                aria-describedby="access-hint"></textarea>
+                            <small id="access-hint">Optional. Tell us about seating, captions, or other access needs.</small>
+                        </p>
+
+                        <p>
+                            <button type="submit">
+                                <span class="material-icons" aria-hidden="true">send</span>
+                                Send RSVP
+                            </button>
+                        </p>
+                    </fieldset>
+                </form>
+
+                <address>
+                    Questions? Contact the film club at
+                    <a href="mailto:films@example.edu">films@example.edu</a>.
+                </address>
+            </section>
+
+            <section id="showtimes">
+                <h2>
+                    <span class="material-icons" aria-hidden="true">schedule</span>
+                    Showtimes and box office
+                </h2>
+                <p>Our marathon dates are listed in the RSVP form. The table below uses release and box office figures
+                    from the Wikipedia article on the trilogy (lifted content for reference).</p>
+
+                <table>
+                    <caption>Budget and worldwide box office gross for each Before Trilogy film.</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Film</th>
+                            <th scope="col">Release date</th>
+                            <th scope="col">Budget</th>
+                            <th scope="col">Box office gross</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Before Sunrise</th>
+                            <td><time datetime="1995-01-19">January 19, 1995</time></td>
+                            <td>$2.5 million</td>
+                            <td>$22.5 million</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Before Sunset</th>
+                            <td><time datetime="2004-02-10">February 10, 2004</time></td>
+                            <td>$2 million</td>
+                            <td>$15.8 million</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Before Midnight</th>
+                            <td><time datetime="2013-01-20">January 20, 2013</time></td>
+                            <td>$3 million</td>
+                            <td>$23.2 million</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="faq">
+                <h2>FAQ</h2>
+                <details>
+                    <summary>Which film should I watch first?</summary>
+                    <p>Start with <cite>Before Sunrise</cite>. Each sequel builds on the previous film, and the nine-year
+                        gaps between releases are part of the story.</p>
+                </details>
+                <details>
+                    <summary>How long is the full marathon?</summary>
+                    <p>The three films have a combined running time of about 290 minutes, plus short breaks between
+                        screenings.</p>
+                </details>
+            </section>
+        </main>
+
+        <footer>
+            <p>Film facts adapted from the Wikipedia article
+                <a href="https://en.wikipedia.org/wiki/Before_trilogy">Before trilogy</a>, available under the
+                Creative Commons Attribution-ShareAlike 4.0 License.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

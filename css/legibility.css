@@ -1,4 +1,215 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600&family=Poppins:wght@400;500;600;700&display=swap');
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/* Skip navigation: off-screen until keyboard focus opens the menu */
+.skip-nav {
+    position: fixed;
+    left: 0.75rem;
+    top: 0.75rem;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    transform: translateY(calc(-100% - 1.5rem));
+    transition: transform 0.15s ease;
+}
+
+.skip-nav:focus-within {
+    transform: translateY(0);
+}
+
+.skip-nav__trigger {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: #1a1a1a;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.skip-nav__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 16rem;
+    background: #1a1a1a;
+    border: 2px solid #fff;
+    border-top: none;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.2s ease, opacity 0.15s ease;
+}
+
+.skip-nav:focus-within .skip-nav__menu {
+    max-height: 12rem;
+    opacity: 1;
+}
+
+.skip-nav__menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.skip-nav__menu a:focus {
+    outline: 2px solid #fff;
+    outline-offset: -2px;
+    background: #333;
+}
+
+.page-kicker {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: 'Outfit', system-ui, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 0.5rem;
+}
+
+.material-icons {
+    vertical-align: middle;
+    font-size: 1.25em;
+}
+
+h2 .material-icons {
+    margin-right: 0.25rem;
+}
+
+.required-hint {
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+form fieldset {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 1rem 1.25rem 1.25rem;
+    margin: 0;
+}
+
+form fieldset fieldset {
+    margin-top: 1rem;
+}
+
+form legend {
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-weight: 600;
+    padding: 0 0.25rem;
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+    width: 100%;
+    max-width: 32rem;
+    font: inherit;
+    padding: 0.5rem;
+    border: 2px solid #1a1a1a;
+    box-sizing: border-box;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    margin-right: 0.35rem;
+}
+
+form input:focus-visible,
+form select:focus-visible,
+form textarea:focus-visible,
+form button:focus-visible {
+    outline: 3px solid #1a1a1a;
+    outline-offset: 2px;
+}
+
+form small {
+    display: block;
+    margin-top: 0.25rem;
+    max-width: 32rem;
+}
+
+form button {
+    font: inherit;
+    font-weight: 600;
+    padding: 0.6rem 1.25rem;
+    cursor: pointer;
+    background: #1a1a1a;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+form button .material-icons {
+    font-size: 1.1rem;
+    margin-right: 0.25rem;
+}
+
+address {
+    font-style: normal;
+    margin-top: 1.5rem;
+}
+
+table {
+    width: 100%;
+    max-width: 48rem;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+caption {
+    text-align: left;
+    font-weight: 600;
+    padding: 0 0 0.75rem;
+    caption-side: top;
+}
+
+th,
+td {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+}
+
+thead th {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+details {
+    margin: 0.75rem 0;
+    padding: 0.5rem 0.75rem;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    max-width: 48rem;
+}
+
+summary {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+figure {
+    margin: 1rem 0;
+    max-width: 48rem;
+}
 
 body {
     background-color: #a3653b;
