@@ -4,28 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: monospace;
-        }
-        a {
-            color: #6ea0ff;
-        }
-    </style>
+    <title>Cooper Baugh — Universal Design class portal</title>
+    <link rel="stylesheet" href="css/legibility.css">
+    <link rel="stylesheet" href="css/portal.css">
 </head>
 
 <body>
-    <h1>Hi! I'm Cooper Baugh</h1>
-    <p>This is my subpar site</p>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <h2>About Me:</h2>
-    <p>I am a fourth-year computer science student who enjoys cooking, movies, running, writing, climbing, coding (not frontend), and talking. Fun stuff. I like design and innovation. Yep.</p><br>
+    <div class="wrapper">
+        <header class="site-header">
+            <p class="site-kicker">Universal Design</p>
+            <h1>Cooper Baugh</h1>
+            <p>Class portal for coding labs and the final project in Universal Design.</p>
+        </header>
 
-    <p><a href="https://www.clastone.org">Shameless plug to my website</a></p>
-    <p><a href="https://persuasion-two.vercel.app/">Shameless plug to my game</a></p>
-    <p><a href="https://backshots-card-game.vercel.app/">Shameless plug for the card game my friends and I made</a></p>
+        <nav aria-label="Coding projects">
+            <h2 class="sr-only">Coding projects</h2>
+            <ul class="project-nav">
+                <li>
+                    <a href="semantic-legibility.html">Lab #2 — Coding &amp; posting a web page — The basics</a>
+                </li>
+                <li>
+                    <a href="semantic-screening.html">Lab #3 — Tables, forms, tabbed browsing, and screen reading</a>
+                </li>
+                <li>
+                    <a href="semantic_html5.html">Lab #4 — Accessible CSS layout</a>
+                </li>
+                <li>
+                    <a href="index.html" aria-current="page">Final project — Universal Design website</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main id="main-content">
+            <section aria-labelledby="about-heading">
+                <h2 id="about-heading">About me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            I am a fourth-year computer science student. I like cooking, movies, running, writing,
+                            climbing, and talking with people about ideas. I also enjoy coding, particularly when it related to 
+                            statistics and finance. #riskManagementIsFun
+                        </p>
+                        <p>
+                            I care about design and innovation, and I am interested in how interfaces can work well for
+                            more people. This portal collects my labs and final project for Universal Design.
+                        </p>
+                    </div>
+                    <figure class="about-portrait">
+                        <img src="imgs/me.jpg" width="667" height="1000" alt="Portrait of Cooper Baugh">
+                    </figure>
+                </div>
+            </section>
+
+            <section class="more-links" aria-labelledby="more-heading">
+                <h2 id="more-heading">Other sites</h2>
+                <ul>
+                    <li><a href="https://www.clastone.org">Clastone</a></li>
+                    <li><a href="https://persuasion-two.vercel.app/">Persuasion (game)</a></li>
+                    <li><a href="https://backshots-card-game.vercel.app/">Backshots card game</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>Cooper Baugh — Universal Design class portal.</p>
+        </footer>
+    </div>
 </body>
 
 </html>
