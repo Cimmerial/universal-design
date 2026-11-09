@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab — Multicolumn CSS Grid layout</title>
+    <link rel="stylesheet" href="css/multicolumn-layout.css">
+</head>
+
+<body class="page-grid">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <p class="site-kicker">Universal Design — Lab</p>
+        <h1>Multicolumn page layout</h1>
+    </header>
+
+    <nav aria-label="Page sections">
+        <h2 class="sr-only">In-page navigation</h2>
+        <ul class="nav-list">
+            <li><a href="#purpose">Purpose</a></li>
+            <li><a href="#grid-flex">Grid and flexbox</a></li>
+            <li><a href="#responsive">Responsive layout</a></li>
+            <li><a href="index.html">Class portal</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <section id="purpose" aria-labelledby="purpose-heading">
+            <h2 id="purpose-heading">Purpose</h2>
+            <p>
+                This page demonstrates a multicolumn layout built with semantic HTML5 landmarks:
+                <code>header</code>, <code>nav</code>, <code>main</code>, two <code>aside</code> elements, and
+                <code>footer</code>. Styles live in an external stylesheet.
+            </p>
+        </section>
+
+        <section id="grid-flex" aria-labelledby="grid-flex-heading">
+            <h2 id="grid-flex-heading">Grid and flexbox</h2>
+            <p>
+                The overall two-dimensional layout uses CSS Grid with named <code>grid-template-areas</code>. The
+                navigation list uses Flexbox for one-dimensional alignment; on small screens the links stack vertically
+                with larger touch targets for easier thumb navigation.
+            </p>
+        </section>
+
+        <section id="responsive" aria-labelledby="responsive-heading">
+            <h2 id="responsive-heading">Responsive layout</h2>
+            <p>
+                A viewport meta tag and media queries reorder content for tablet and mobile widths. On tablet, the main
+                column spans the full width with the asides side by side below. On mobile, regions stack in a single
+                column.
+            </p>
+        </section>
+    </main>
+
+    <aside class="aside-related" aria-labelledby="related-heading">
+        <h2 id="related-heading">Related labs</h2>
+        <ul>
+            <li><a href="semantic-legibility.html">Lab 2 — Basics</a></li>
+            <li><a href="semantic-screening.html">Lab 3 — Forms &amp; tables</a></li>
+            <li><a href="semantic_html5.html">Lab 4 — Semantic HTML5</a></li>
+        </ul>
+    </aside>
+
+    <aside class="aside-contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">About this site</h2>
+        <p>
+            Cooper Baugh — Universal Design course work. Colors follow an Adobe Color earth-tone palette; type uses
+            Libre Baskerville and Source Sans 3 from Google Fonts.
+        </p>
+    </aside>
+
+    <footer>
+        <p>Cooper Baugh — Multicolumn layout lab.</p>
+    </footer>
+</body>
+
+</html>
